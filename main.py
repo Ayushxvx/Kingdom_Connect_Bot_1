@@ -10,6 +10,9 @@ from csv_to_dict import csv_to_dict
 my_dict = csv_to_dict()
 
 app = Flask(__name__)
+@app.route("/")
+def home():
+    return "Bot is running!",200
 
 def run_flask():
     port = int(os.environ.get("PORT",8080))
