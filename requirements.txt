@@ -1,0 +1,5 @@
+disnake
+aiohttp
+joblib
+flask
+python-dotenv
