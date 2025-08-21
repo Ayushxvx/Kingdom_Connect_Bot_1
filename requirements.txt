@@ -3,3 +3,4 @@ aiohttp
 joblib
 flask
 python-dotenv
+scikit-learn
