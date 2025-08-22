@@ -106,10 +106,11 @@ async def id_commandment(inter:disnake.ApplicationCommandInteraction,text):
         
 @bot.event
 async def on_slash_command_error(inter:disnake.ApplicationCommandInteraction,error):
-    if not inter.response.is_done():
-        await inter.response.send_message("Error :) ❌")
-    else:
-        pass
+   if not inter.response.is_done():
+        try:
+            await inter.response.send_message("❌ An error occurred...", ephemeral=True)
+        except:
+            pass
 
 if token:
     bot.run(token)
