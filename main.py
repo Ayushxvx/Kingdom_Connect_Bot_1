@@ -43,8 +43,15 @@ async def on_ready():
 
 @bot.event
 async def on_message(msg):
+    if msg.author == bot.user:
+        return
+        
+    if "zeus is cool" in msg.content.lower():
+        await msg.reply("You are absolutely right ✅")
+        
     if "Jesus is king".lower() in msg.content.lower() or "Jesus is Lord".lower() in msg.content.lower():
         await msg.reply("Amen! 🙌")
+        
     else:
         greetings = ["hello", "hi", "hey", "yo", "howdy", "greetings"]
         if bot.user in msg.mentions:
