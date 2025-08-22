@@ -9,7 +9,7 @@ from csv_to_dict import csv_to_dict
 
 my_dict = csv_to_dict()
 
-app = Flask(__name__)
+app = Flask('')
 @app.route("/")
 def home():
     return "Bot is running!",200
